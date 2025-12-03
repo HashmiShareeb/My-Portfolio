@@ -9,7 +9,7 @@ export const ProjectBanner = ({ project }: { project: ProjectData }) => {
       width={1400}
       height={600}
       quality={95}
-      className="mx-auto my-8 overflow-hidden shadow-lg dark:shadow-none rounded-xl w-full h-auto"
+      className="mx-auto my-8 overflow-hidden shadow-md dark:shadow-none rounded-xl w-full h-auto"
       priority
     />
   )

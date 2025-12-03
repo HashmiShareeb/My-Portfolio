@@ -112,7 +112,7 @@ export default function ProjectPage() {
   return (
     <section className="dark:text-slate-300 font-medium">
       {/* start go back to project btn */}
-      <div className="fixed top-10 left-4 z-20">
+      <div className="fixed lg:top-20 top-14 left-4 z-20">
         <Link href="/project">
           <button className="relative inline group transition duration-300 text-teal-500 dark:text-teal-400">
             <span className="mt-2 flex items-center gap-2 transition-colors group-hover:text-teal-300 group-focus:text-teal-300 px-4 py-2 rounded-full bg-white/80 dark:bg-slate-900/80 shadow dark:shadow-none">
@@ -120,7 +120,7 @@ export default function ProjectPage() {
                 size={20}
                 className="transform transition-transform duration-300 lg:group-hover:-translate-x-1"
               />
-              <span className="sr-only md:not-sr-only">Projects</span>
+              <span className="sr-only md:not-sr-only">Back</span>
             </span>
           </button>
         </Link>
@@ -134,7 +134,7 @@ export default function ProjectPage() {
               {projectData.label}
             </span>
           )}
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="lg:text-4xl text-2xl font-bold mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
               {projectData.title}
             </span>

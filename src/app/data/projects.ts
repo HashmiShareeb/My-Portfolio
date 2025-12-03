@@ -20,6 +20,7 @@ const Data: ProjectData[] = [
     ],
   },
   {
+    featured: true,
     id: 'my-portfolio',
     title: 'My Portfolio',
     label: 'Frontend Development',
@@ -80,17 +81,15 @@ const Data: ProjectData[] = [
     ],
     githubUrl: 'https://github.com/HashmiShareeb/researchproject_backend',
     gallery: ['routesummary', 'vehicle_list', 'ridehistory_dm'],
-
-    featured: true,
+    videoUrl:
+      'https://drive.google.com/file/d/1UnGSze1mqtRbY23RQg-quPxPp18ObcYx/view?usp=sharing',
   },
   {
     id: 'harmony-energy',
     title: 'Harmony Energy',
     label: 'Internship',
     image: 'My_Harmony_Energy',
-
     sections: [],
-
     tags: [
       'API Integration',
       'Docker',
@@ -155,6 +154,7 @@ const Data: ProjectData[] = [
     label: 'Internship',
     tags: ['BEM', 'Bootstrap', 'PHP', 'ProccesWire', 'SCSS', 'UIkit', 'Vue.js'],
     liveUrl: 'https://deborahlintermans.be/',
+    otherFile: '/posterstage.png',
   },
   {
     id: 'michael-naessens',
@@ -163,6 +163,7 @@ const Data: ProjectData[] = [
     image: 'MNaesens',
     tags: ['BEM', 'Bootstrap', 'PHP', 'ProccesWire', 'SCSS', 'UIkit', 'Vue.js'],
     liveUrl: 'https://michaelnaessens.be/',
+    otherFile: '/posterstage.png',
   },
   {
     id: 'movie-app',
@@ -172,8 +173,6 @@ const Data: ProjectData[] = [
     githubUrl: 'https://github.com/HashmiShareeb/movieapp',
     liveUrl: 'https://hashmishareeb.github.io/movieapp/',
     tags: ['CSS', 'HTML', 'JavaScript', 'TheMovieDB API'],
-    // externalLink: 'https://www.themoviedb.org/',
-    //ExtraImages: ['projects/themovieapp_rbjdme'],
   },
 ]
 
