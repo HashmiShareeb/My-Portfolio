@@ -1,30 +1,6 @@
-import { ProjectBanner } from '@/app/components/project/Banner'
 import Link from 'next/link'
 
-<ProjectBanner project={props} />
-
-{props.label && (
-    <span className="inline-block mb-4 px-3 py-1 text-sm font-semibold rounded-full bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-300">
-      {props.label}
-    </span>
-)}
-
-
-  <h2 className="text-2xl font-bold mb-4">
-    <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
-       {props.title}
-    </span>
-  </h2>
-
-  {(props.tags ?? []).map(tag => (
-    <span
-      key={tag}
-      className="px-3 py-1 text-xs sm:text-sm font-mono bg-gray-200 dark:bg-slate-800 rounded-full mt-1 inline-block mr-2 mb-4 text-gray-800 dark:text-gray-200"
-    >
-      {tag}
-    </span>
-  ))}
 
 
 
-For this project, I made a timetable app that shows the timetable of each course (which is simulated). This app is made with Flutter, using the <Link className='text-teal-500 dark:text-teal-400 hover:text-teal-300' target='_blank' rel='noopener noreferrer' href="https://pub.dev/packages/calendar_view">calender view package</Link> to display the timetable. I also used firebase for the user authentication and firebase as the database to store the added event from each user. This was a project I had to make in the class called SmartApp Development, where we use Flutter and Dart to make a mobile application.
+For the exams in SmartApp Development we had to make a project and implement all the techniques and features we have learned throughout the course, the result is a timetable app that shows the timetable of each course (which is simulated). This app is made with Flutter, using the <Link className='text-teal-500 dark:text-teal-400 hover:text-teal-300' target='_blank' rel='noopener noreferrer' href="https://pub.dev/packages/calendar_view">calender view package</Link> to display the timetable. I also used firebase for the user authentication and firebase as the database to store the added event from each user. This was a project I had to make in the class called SmartApp Development, where we use Flutter and Dart to make a mobile application.

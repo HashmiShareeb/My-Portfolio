@@ -1,33 +1,6 @@
-
-import { ProjectBanner } from '@/app/components/project/Banner'
 import Link from 'next/link'
 
-
-  <ProjectBanner project={props} />
-
-  {props.label && (
-    <span className="inline-block mb-4 px-3 py-1 text-sm font-semibold rounded-full bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-300">
-      {props.label}
-    </span>
-  )}
-
-
-  <h2 className="text-2xl font-bold mb-4">
-    <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
-       {props.title}
-    </span>
-  </h2>
-
-  {(props.tags ?? []).map(tag => (
-    <span
-      key={tag}
-      className="px-3 py-1 text-xs sm:text-sm font-mono bg-gray-200 dark:bg-slate-800 rounded-full mt-1 inline-block mr-2 mb-4 text-gray-800 dark:text-gray-200"
-    >
-      {tag}
-    </span>
-  ))}
-
-  {/* **Technologies used:** {props.technologies.join(', ')} */}
+{/* **Technologies used:** {props.technologies.join(', ')} */}
 
 During Industry Project i was assigned with a team of talanted developers: **Jarne Delarue** and **Aléssia Vinnik**, and worked with <a href="https://www.delaware.pro/en-be" className='text-teal-500 dark:text-teal-400 hover:text-teal-300' target='_blank' rel="noopener noreferrer">Delaware</a>. The **Digital Patient Twin** is a real-time monitoring dashboard designed to empower doctors with instant access to patient data. By providing a user-friendly interface, doctors can efficiently manage patient information and enhance patient care. Collaborating closely with my team members, I integrated backend data seamlessly into the frontend. This cohesive approach ensures that doctors receive accurate and up-to-date patient information. Due the company policy I can unfortunately not display the backend code online because of the company policy.
 {/* 

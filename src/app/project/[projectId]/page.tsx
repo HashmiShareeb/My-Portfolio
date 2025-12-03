@@ -18,6 +18,7 @@ import { ProjectWrapper } from '@/app/components/ProjectWrapper'
 import { ProjectCTAs as ProjectCTA } from '@/app/components/project/cta'
 import { Section } from '@/app/components/project/Section'
 import { ProjectGallery } from '@/app/components/project/ProjectGallery'
+import { ProjectBanner } from '@/app/components/project/Banner'
 
 // Map projectId → { data, mdx component }
 const projects: Record<string, { data: ProjectData; Content: any }> = {
@@ -110,30 +111,50 @@ export default function ProjectPage() {
 
   return (
     <section className="dark:text-slate-300 font-medium">
+      {/* start go back to project btn */}
+      <div className="fixed lg:top-20 top-14 left-4 z-20">
+        <Link href="/project">
+          <button className="relative inline group transition duration-300 text-teal-500 dark:text-teal-400">
+            <span className="mt-2 flex items-center gap-2 transition-colors group-hover:text-teal-300 group-focus:text-teal-300 px-4 py-2 rounded-full bg-white/80 dark:bg-slate-900/80 shadow dark:shadow-none">
+              <ChevronLeft
+                size={20}
+                className="transform transition-transform duration-300 lg:group-hover:-translate-x-1"
+              />
+              <span className="sr-only md:not-sr-only">Back</span>
+            </span>
+          </button>
+        </Link>
+      </div>
+      {/* end of go back button */}
       <MDXProvider>
         <ProjectWrapper>
-          {/* start go back to project btn */}
-          <div className="fixed top-10 left-4 z-20">
-            <Link href="/project">
-              <button className="relative inline group transition duration-300 text-teal-500 dark:text-teal-400">
-                <span className="mt-2 flex items-center gap-2 transition-colors group-hover:text-teal-300 group-focus:text-teal-300 px-4 py-2 rounded-full bg-white/80 dark:bg-slate-900/80 shadow dark:shadow-none">
-                  <ChevronLeft
-                    size={20}
-                    className="transform transition-transform duration-300 lg:group-hover:-translate-x-1"
-                  />
-                  <span className="sr-only md:not-sr-only">Projects</span>
-                </span>
-              </button>
-            </Link>
-            {/* end of go back button */}
-          </div>
+          <ProjectBanner project={projectData} />
+          {projectData.label && (
+            <span className="inline-block mb-4 px-3 py-1 text-sm font-semibold rounded-full bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-300">
+              {projectData.label}
+            </span>
+          )}
+          <h2 className="lg:text-4xl text-2xl font-bold mb-4">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
+              {projectData.title}
+            </span>
+          </h2>
+          {(projectData.tags ?? []).map(tag => (
+            <span
+              key={tag}
+              className="px-3 py-1 text-xs sm:text-sm font-mono bg-gray-200 dark:bg-slate-800 rounded-full mt-1 inline-block mr-2 mb-4 text-gray-800 dark:text-gray-200"
+            >
+              {tag}
+            </span>
+          ))}
+          {/*Render MDX*/}
           <Content {...projectData} />
           {/* Render sections */}
           {project.sections?.map((section, idx) => (
             <Section key={idx} section={section} />
           ))}
-          <ProjectGallery project={projectData} />
           <ProjectCTA project={projectData} />
+          <ProjectGallery project={projectData} />
         </ProjectWrapper>
       </MDXProvider>
     </section>

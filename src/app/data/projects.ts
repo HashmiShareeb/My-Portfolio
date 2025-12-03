@@ -20,6 +20,7 @@ const Data: ProjectData[] = [
     ],
   },
   {
+    featured: true,
     id: 'my-portfolio',
     title: 'My Portfolio',
     label: 'Frontend Development',
@@ -80,23 +81,15 @@ const Data: ProjectData[] = [
     ],
     githubUrl: 'https://github.com/HashmiShareeb/researchproject_backend',
     gallery: ['routesummary', 'vehicle_list', 'ridehistory_dm'],
-
-    featured: true,
+    videoUrl:
+      'https://drive.google.com/file/d/1UnGSze1mqtRbY23RQg-quPxPp18ObcYx/view?usp=sharing',
   },
   {
     id: 'harmony-energy',
     title: 'Harmony Energy',
     label: 'Internship',
     image: 'My_Harmony_Energy',
-
-    sections: [
-      {
-        title: 'Marketing Website',
-        image: 'marketingsite_harmony',
-        text: 'I completely recreated the marketing website using Svelte, TypeScript, and Tailwind CSS. I implemented i18n using Svelte Stores to manage locales, which was a huge challenge at first but with using reactivity that Svelte 5 provides this was ultimately a smooth process. I also got the freedom to make my own layout as my intership mentor was impressed by my UI/UX and frontend skills, it was a fun project to work on and a good introduction on using Svelte which may come in handy for future projects 😉.',
-      },
-    ],
-
+    sections: [],
     tags: [
       'API Integration',
       'Docker',
@@ -113,7 +106,11 @@ const Data: ProjectData[] = [
     otherFile: '/Harmony Brochure.pdf',
     liveUrl: 'https://harmony.energy/',
     featured: true,
-    gallery: ['graphprices_iai6af_ipzat2', 'kpichart_r5fdnn_nhgcbn'],
+    gallery: [
+      'marketingsite_harmony',
+      'graphprices_iai6af_ipzat2',
+      'kpichart_r5fdnn_nhgcbn',
+    ],
   },
   {
     id: 'nexus-fm',
@@ -157,6 +154,7 @@ const Data: ProjectData[] = [
     label: 'Internship',
     tags: ['BEM', 'Bootstrap', 'PHP', 'ProccesWire', 'SCSS', 'UIkit', 'Vue.js'],
     liveUrl: 'https://deborahlintermans.be/',
+    otherFile: '/posterstage.png',
   },
   {
     id: 'michael-naessens',
@@ -165,6 +163,7 @@ const Data: ProjectData[] = [
     image: 'MNaesens',
     tags: ['BEM', 'Bootstrap', 'PHP', 'ProccesWire', 'SCSS', 'UIkit', 'Vue.js'],
     liveUrl: 'https://michaelnaessens.be/',
+    otherFile: '/posterstage.png',
   },
   {
     id: 'movie-app',
@@ -174,8 +173,6 @@ const Data: ProjectData[] = [
     githubUrl: 'https://github.com/HashmiShareeb/movieapp',
     liveUrl: 'https://hashmishareeb.github.io/movieapp/',
     tags: ['CSS', 'HTML', 'JavaScript', 'TheMovieDB API'],
-    // externalLink: 'https://www.themoviedb.org/',
-    //ExtraImages: ['projects/themovieapp_rbjdme'],
   },
 ]
 

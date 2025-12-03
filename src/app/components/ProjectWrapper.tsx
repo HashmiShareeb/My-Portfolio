@@ -17,7 +17,9 @@ export const ProjectWrapper = ({
       animate={{ opacity: 1, y: 0 }}
       className="min-h-screen flex flex-col my-10"
     >
-      <div className="px-4 md:px-40 lg:px-64">{children}</div>
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {children}
+      </div>
     </motion.section>
   )
 }
