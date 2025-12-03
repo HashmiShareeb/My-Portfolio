@@ -89,13 +89,7 @@ const Data: ProjectData[] = [
     label: 'Internship',
     image: 'My_Harmony_Energy',
 
-    sections: [
-      {
-        title: 'Marketing Website',
-        image: 'marketingsite_harmony',
-        text: 'I completely recreated the marketing website using Svelte, TypeScript, and Tailwind CSS. I implemented i18n using Svelte Stores to manage locales, which was a huge challenge at first but with using reactivity that Svelte 5 provides this was ultimately a smooth process. I also got the freedom to make my own layout as my intership mentor was impressed by my UI/UX and frontend skills, it was a fun project to work on and a good introduction on using Svelte which may come in handy for future projects 😉.',
-      },
-    ],
+    sections: [],
 
     tags: [
       'API Integration',
@@ -113,7 +107,11 @@ const Data: ProjectData[] = [
     otherFile: '/Harmony Brochure.pdf',
     liveUrl: 'https://harmony.energy/',
     featured: true,
-    gallery: ['graphprices_iai6af_ipzat2', 'kpichart_r5fdnn_nhgcbn'],
+    gallery: [
+      'marketingsite_harmony',
+      'graphprices_iai6af_ipzat2',
+      'kpichart_r5fdnn_nhgcbn',
+    ],
   },
   {
     id: 'nexus-fm',

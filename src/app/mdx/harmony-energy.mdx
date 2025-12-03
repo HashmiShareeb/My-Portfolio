@@ -1,33 +1,6 @@
-import { ProjectBanner } from '@/app/components/project/Banner'
 import Link from 'next/link'
 
-
-  <ProjectBanner project={props} />
-
-  {props.label && (
-    <span className="inline-block mb-4 px-3 py-1 text-sm font-semibold rounded-full bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-300">
-      {props.label}
-    </span>
-  )}
-
-
-  <h2 className="text-2xl font-bold mb-4">
-    <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
-       {props.title}
-    </span>
-  </h2>
-
-  {(props.tags ?? []).map(tag => (
-    <span
-      key={tag}
-      className="px-3 py-1 text-xs sm:text-sm font-mono bg-gray-200 dark:bg-slate-800 rounded-full mt-1 inline-block mr-2 mb-4 text-gray-800 dark:text-gray-200"
-    >
-      {tag}
-    </span>
-  ))}
-
 During my internship at Harmony Energy, I contributed to both their  **<a href="https://harmony.energy/" className='text-teal-500 dark:text-teal-400  hover:text-teal-300' target='_blank' rel="noopener noreferrer">marketing website</a>** and their internal dashboard. I recreated the entire website using modern technologies such as Svelte 5, TypeScript, and Tailwind CSS, and implemented i18n using Svelte Stores for locale and language management. On the internal 'My Harmony Dashboard', I worked on multiple core features including the dynamic device management page, onboarding flow (with GoLang autodetection script), energy forecasting charts, and a logging component. I also recreated complex KPI and monitoring graphs using Grafana and custom HTML panels. Throughout the project, I focused on clean code structure, API integration, and user experience improvements.
-
 
 
 ## My Harmony Dashboard
@@ -60,3 +33,6 @@ I also developed a **multi-step modal** to add, edit, and validate devices. This
 In support of onboarding, I've developed an autodetection script in Golang that scans the local network for compatible devices using both MAC and IP address discovery. This script executes ARP queries and response analysis to enumerate nearby hardware, detects vendor prefixes, and associated metadata like IP address, device type, and firmware.
 On the frontend, I prepared the Device Page and modal components that would be used to display and add detected devices directly into the dashboard in future updates. The auto-detection script runs on the backend as a service, which lists the discovered devices for installers to swiftly review and configure.
 Put together, the Device Page and the autodetection system comprise an efficient workflow that greatly enhances the way installers onboard and manage Harmony Energy devices.
+
+## Marketing website
+I completely recreated the marketing website using Svelte, TypeScript, and Tailwind CSS. I implemented i18n using Svelte Stores to manage locales, which was a huge challenge at first but with using reactivity that Svelte 5 provides this was ultimately a smooth process. I also got the freedom to make my own layout as my intership mentor was impressed by my UI/UX and frontend skills, it was a fun project to work on and a good introduction on using Svelte which may come in handy for future projects 😉.

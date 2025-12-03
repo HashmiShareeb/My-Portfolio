@@ -1,31 +1,6 @@
-import { ProjectBanner } from '@/app/components/project/Banner'
 import Link from 'next/link'
-
-<ProjectBanner project={props} />
-
-{props.label && (
-  <span className="inline-block mb-4 px-3 py-1 text-sm font-semibold rounded-full bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-300">
-    {props.label}
-  </span>
-)}
-
-<h2 className="text-2xl font-bold mb-4">
-  <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
-     {props.title}
-  </span>
-</h2>
-
-{(props.tags ?? []).map(tag => (
-  <span
-    key={tag}
-    className="px-3 py-1 text-xs sm:text-sm font-mono bg-gray-200 dark:bg-slate-800 rounded-full mt-1 inline-block mr-2 mb-4 text-gray-800 dark:text-gray-200"
-  >
-    {tag}
-  </span>
-))}
 
 During my internship at <Link target='_blank' className='text-teal-500 dark:text-teal-400 hover:text-teal-300' rel='noopener noreferrer' href="https://www.indiegroup.be/">Exsited (now Indie Group)</Link>, I got the chance to build a website for a dog coach. I used ProcessWire (a PHP-based CMS) as the foundation, styled the pages with SCSS using the BEM methodology, 
 and added some interactivity with VueJS. For responsiveness and smooth layouts, I combined UIkit and Bootstrap.
 
 The site features a services blog and a contact form, all designed to be user-friendly and visually appealing.
-
