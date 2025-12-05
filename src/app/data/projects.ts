@@ -42,9 +42,9 @@ const Data: ProjectData[] = [
     title: 'Blitx',
     image: 'Bachelor_Proef',
     label: 'Research Project',
-    // alphabetically align the tags
     tags: [
       'Axios',
+      'DTO',
       'Hexagonal Architecture',
       'JPA',
       'Mapbox',
