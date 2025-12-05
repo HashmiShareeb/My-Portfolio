@@ -20,7 +20,6 @@ const Data: ProjectData[] = [
     ],
   },
   {
-    featured: true,
     id: 'my-portfolio',
     title: 'My Portfolio',
     label: 'Frontend Development',
@@ -38,6 +37,7 @@ const Data: ProjectData[] = [
     gallery: ['my_portfolio_dm_display', 'my_portfolio_lm'],
   },
   {
+    featured: true,
     id: 'blitx',
     title: 'Blitx',
     image: 'Bachelor_Proef',
