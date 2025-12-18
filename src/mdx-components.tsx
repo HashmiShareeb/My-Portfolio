@@ -7,7 +7,7 @@ const components: MDXComponents = {
   // h1: (props) => <h1 className="text-2xl" {...props} />,
   h2: props => (
     <h2
-      className="text-xl font-semibold text-teal-500 dark:text-teal-400 mb-3 mt-4"
+      className="text-xl font-semibold text-teal-500 dark:text-teal-400 mb-4 mt-4"
       {...props}
     />
   ),
@@ -17,7 +17,8 @@ const components: MDXComponents = {
       {...props}
     />
   ),
-  p: props => <p className="mb-6 mt-4" {...props} />,
+  p: props => <p className="mb-4 mt-4" {...props} />,
+  //li: props => <li className="list-disc text-teal-400" {...props} />,
 }
 
 export function useMDXComponents(): MDXComponents {

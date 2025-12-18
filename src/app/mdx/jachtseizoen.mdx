@@ -1,0 +1,39 @@
+import Link from 'next/link'
+
+
+This project is inspired by the Dutch TV show **Jachtseizoen**. The goal was to design and build a **real-time multiplayer game** where players use navigation and live location updates to track down other players within a defined radius. Player locations are updated every **10 seconds**. When the **Jager** comes within range of the **Boef**, the *“gevonden”* button becomes active, allowing the Jager to catch the Boef and end the game.
+
+## Gameplay & Features
+
+- Players can **create or join a game session**
+- Each game generates a **unique lobby code** (Kahoot-inspired)
+- Players join the lobby using this code
+- Roles are randomly assigned:
+  - **Jager** (Hunter)
+  - **Boef** (Fugitive)
+- The game ends when the Boef is caught or when the host leaves the session
+
+
+## My role - Scrum Master & Designer
+I fulfilled a dual role in this project as **Scrum Master** and **Frontend Developer / UI Designer**.
+
+As the Scrum Master, it was my duty to facilitate the team during the entire product development phase. A rigorous process followed by the team for conducting weekly sprint meetings allowed me to track their work and make sure that the team remained on target in regard to our time constraints. There was overwhelming emphasis on the concept of creating & delivering an efficient **Minimum Viable Product (MVP)** first that kept the team well-grounded in the required gameplay features before even contemplating the desired features.
+
+### Front-end developer & UI Designer
+My team member and I where responsible for the the UI/UX and the frontend using **Xamarin**.Our responsibilities included:
+- Designing user flows for lobby creation, joining, and gameplay  
+- Implementing responsive mobile UI components  
+- Integrating live game state updates into the UI  
+- Ensuring a clear visual distinction between the Jager and Boef roles 
+
+In collabaration with **Howest jeugd en beweging** in Bruges, where students from all over the city were invited to test our prototype and give us constructive feedback, via <Link className='text-teal-500 dark:text-teal-400 hover:text-teal-300' rel='noopener noreferrer' target="_blank" href="https://xd.adobe.com/view/cf58214f-432d-4b19-8b53-0b452c7083f4-9a0b/">Adobe XD prototype </Link>, we gathered insights that directly influenced improvements to the application flow and the overall clarity of its structure.
+
+##  Backend & Database setup
+The backend of the application used **Azure Cosmos DB**, a NoSQL database well-suited for real-time and scalable data storage. While I was not the primary backend developer, I proposed the use of Cosmos DB and actively collaborated with the backend team to ensure seamless integration with the frontend.
+
+## Challanges & Conclusion
+The part of this project that was hardest to complete was definitely the **real-time multiplayer functionality**. To coordinate player locations in real time and to ensure that the Jager’s tracking screen updates dynamically, while ensuring that all of this happens at regular intervals with storage in the back end, was definitely challenging.
+
+These challenges have pushed me to think critically about performance issues of consistency and experience in real-time environments. Issues of consistency and small performance differences had a real-world effect on the gameplay experience and are what make consistency and clarity in UI so important.
+
+In conclusion, the project helped me improve my concepts related to real-time systems, the interaction between the frontend and backend, and collaborative problem-solving. The project showcases how I can work with complex technological systems in addition to emphasizing user interface and system integrity.

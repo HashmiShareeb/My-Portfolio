@@ -85,6 +85,7 @@ const Data: ProjectData[] = [
       'https://drive.google.com/file/d/1UnGSze1mqtRbY23RQg-quPxPp18ObcYx/view?usp=sharing',
   },
   {
+    featured: true,
     id: 'harmony-energy',
     title: 'Harmony Energy',
     label: 'Internship',
@@ -105,7 +106,6 @@ const Data: ProjectData[] = [
 
     otherFile: '/Harmony Brochure.pdf',
     liveUrl: 'https://harmony.energy/',
-    featured: true,
     gallery: [
       'marketingsite_harmony',
       'graphprices_iai6af_ipzat2',
@@ -147,6 +147,7 @@ const Data: ProjectData[] = [
     githubUrl: 'https://github.com/HashmiShareeb/smartapp_project24',
     tags: ['Dart', 'Firebase', 'Firestore', 'Flutter'],
   },
+
   {
     id: 'deborah-lintermans',
     title: 'Hondencoach Deborah Lintermans',
@@ -155,6 +156,18 @@ const Data: ProjectData[] = [
     tags: ['BEM', 'Bootstrap', 'PHP', 'ProccesWire', 'SCSS', 'UIkit', 'Vue.js'],
     liveUrl: 'https://deborahlintermans.be/',
     otherFile: '/posterstage.png',
+  },
+  {
+    id: 'jachtseizoen',
+    title: 'Jachtseizoen',
+    label: 'Team Project',
+    image: 'Jachtseizoen_banner_lvi9ct',
+    tags: ['Azure', 'CosmosDB', 'C#', 'Google Maps API', 'Xamarin'],
+    gallery: [
+      'jachtseizoen_create_game',
+      'jachtseizoen_roll',
+      'jachtseizoen_ingame',
+    ],
   },
   {
     id: 'michael-naessens',
