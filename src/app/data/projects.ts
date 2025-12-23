@@ -158,6 +158,7 @@ const Data: ProjectData[] = [
     otherFile: '/posterstage.png',
   },
   {
+    featured: true,
     id: 'jachtseizoen',
     title: 'Jachtseizoen',
     label: 'Team Project',
