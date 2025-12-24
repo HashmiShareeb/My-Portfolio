@@ -16,7 +16,14 @@
   border-radius: 6px;
 }
 
-li {
+/*MDX*/
+.mdx-container li {
   list-style: disc;
   margin-left: 1rem;
+}
+
+/*carousel library class*/
+.carousel-root li {
+  list-style: none !important;
+  margin-left: 0;
 }

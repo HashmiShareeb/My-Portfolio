@@ -155,7 +155,9 @@ export default function ProjectPage() {
             </span>
           ))}
           {/*Render MDX*/}
-          <Content {...projectData} />
+          <div className="mdx-container">
+            <Content {...projectData} />
+          </div>
           {/* Render sections */}
           {project.sections?.map((section, idx) => (
             <Section key={idx} section={section} />

@@ -130,7 +130,6 @@ const Data: ProjectData[] = [
       'Vue-Charts',
     ],
     githubUrl: 'https://github.com/HashmiShareeb/shareeb_afsd_fm2025',
-    featured: true,
     gallery: [
       'building_page_admin',
       'nexus_fm_manageprop',
@@ -158,6 +157,7 @@ const Data: ProjectData[] = [
     otherFile: '/posterstage.png',
   },
   {
+    featured: true,
     id: 'jachtseizoen',
     title: 'Jachtseizoen',
     label: 'Team Project',
