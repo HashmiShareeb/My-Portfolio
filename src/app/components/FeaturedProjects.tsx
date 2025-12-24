@@ -20,9 +20,9 @@ const FeaturedProjects = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       id="projects"
-      className="py-24 px-4 mx-auto lg:mx-0"
+      className="py-24 px-4 lg:mx-0"
     >
-      <div className="flex lg:flex-row flex-col items-center gap-8">
+      <div className="flex lg:flex-row flex-col items-center">
         <GradientTitle title="featured projects" IsCentered={false} />
         <Link
           href="/project"
@@ -38,23 +38,21 @@ const FeaturedProjects = () => {
         </Link>
       </div>
 
-      {/* Carousel Container */}
-      <div className="mt-8">
+      <div className="mt-8 hidden md:block">
+        {/* Carousel Container large screens */}
         <Carousel
-          transitionTime={300}
-          interval={2500}
-          swipeScrollTolerance={5}
+          stopOnHover
+          centerMode
+          swipable
           showIndicators={false}
           showStatus={false}
-          autoPlay={false}
           useKeyboardArrows={true}
-          centerMode={true}
           centerSlidePercentage={30}
           renderArrowPrev={(onClickHandler, hasPrev) =>
             hasPrev && (
               <button
                 onClick={onClickHandler}
-                className="absolute left-2 top-1/2 z-20 -translate-y-1/2
+                className="hidden lg:block absolute left-2 top-1/2 z-20 -translate-y-1/2
                            rounded-full bg-white/90 dark:bg-slate-900/90
                            p-3 shadow-lg hover:scale-110 transition"
                 aria-label="Previous project"
@@ -67,7 +65,7 @@ const FeaturedProjects = () => {
             hasNext && (
               <button
                 onClick={onClickHandler}
-                className="absolute right-2 top-1/2 z-20 -translate-y-1/2
+                className="lg:block hidden absolute right-2 top-1/2 z-20 -translate-y-1/2
                            rounded-full bg-white/90 dark:bg-slate-900/90
                            p-3 shadow-lg hover:scale-110 transition"
                 aria-label="Next project"
@@ -80,13 +78,7 @@ const FeaturedProjects = () => {
           {featured.map(project => (
             <div key={project.id} className="px-2">
               <Link href={`/project/${project.id}`}>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                  viewport={{ once: true }}
-                  className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-lg transition-all duration-300"
-                >
+                <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-lg transition-all duration-300">
                   <div className="relative w-full overflow-hidden">
                     <CldImage
                       width={800}
@@ -121,7 +113,88 @@ const FeaturedProjects = () => {
                       />
                     </button>
                   </div>
-                </motion.div>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </Carousel>
+      </div>
+      {/*carousel smaller screens*/}
+      <div className="mt-8 block md:hidden">
+        <Carousel
+          stopOnHover
+          centerMode
+          swipable
+          showIndicators
+          showStatus={false}
+          useKeyboardArrows={true}
+          centerSlidePercentage={100}
+          renderArrowPrev={(onClickHandler, hasPrev) =>
+            hasPrev && (
+              <button
+                onClick={onClickHandler}
+                className="hidden lg:block absolute left-2 top-1/2 z-20 -translate-y-1/2
+                           rounded-full bg-white/90 dark:bg-slate-900/90
+                           p-3 shadow-lg hover:scale-110 transition"
+                aria-label="Previous project"
+              >
+                <ChevronRight className="rotate-180 text-teal-500" size={28} />
+              </button>
+            )
+          }
+          renderArrowNext={(onClickHandler, hasNext) =>
+            hasNext && (
+              <button
+                onClick={onClickHandler}
+                className="lg:block hidden absolute right-2 top-1/2 z-20 -translate-y-1/2
+                           rounded-full bg-white/90 dark:bg-slate-900/90
+                           p-3 shadow-lg hover:scale-110 transition"
+                aria-label="Next project"
+              >
+                <ChevronRight className="text-teal-500" size={28} />
+              </button>
+            )
+          }
+        >
+          {featured.map(project => (
+            <div key={project.id} className="px-2">
+              <Link href={`/project/${project.id}`}>
+                <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-lg transition-all duration-300">
+                  <div className="relative w-full overflow-hidden">
+                    <CldImage
+                      width={800}
+                      height={600}
+                      src={project.image}
+                      alt={project.title}
+                      className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                      quality={90}
+                    />
+                  </div>
+
+                  <div className="p-5 text-left w-full">
+                    {project.title && (
+                      <h2 className="text-2xl font-bold text-transparent">
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
+                          {project.title}
+                        </span>
+                      </h2>
+                    )}
+                    {project.label && (
+                      <p className="mt-2 dark:text-slate-300 text-base font-medium">
+                        {project.label}
+                      </p>
+                    )}
+                    <button className="mt-4 inline-flex items-center gap-2 text-teal-600 dark:text-teal-400 font-medium group">
+                      <span className="group-hover:text-teal-300 transition-all">
+                        View Project
+                      </span>
+                      <ChevronRight
+                        size={20}
+                        className="transition-transform duration-300 transform group-hover:translate-x-1"
+                      />
+                    </button>
+                  </div>
+                </div>
               </Link>
             </div>
           ))}
