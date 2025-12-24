@@ -41,14 +41,41 @@ const FeaturedProjects = () => {
       {/* Carousel Container */}
       <div className="mt-8">
         <Carousel
+          transitionTime={300}
+          interval={2500}
+          swipeScrollTolerance={5}
           showIndicators={false}
-          className="featured-carousel"
           showStatus={false}
-          swipeable={true}
-          autoPlay={true}
+          autoPlay={false}
           useKeyboardArrows={true}
           centerMode={true}
-          centerSlidePercentage={36}
+          centerSlidePercentage={30}
+          renderArrowPrev={(onClickHandler, hasPrev) =>
+            hasPrev && (
+              <button
+                onClick={onClickHandler}
+                className="absolute left-2 top-1/2 z-20 -translate-y-1/2
+                           rounded-full bg-white/90 dark:bg-slate-900/90
+                           p-3 shadow-lg hover:scale-110 transition"
+                aria-label="Previous project"
+              >
+                <ChevronRight className="rotate-180 text-teal-500" size={28} />
+              </button>
+            )
+          }
+          renderArrowNext={(onClickHandler, hasNext) =>
+            hasNext && (
+              <button
+                onClick={onClickHandler}
+                className="absolute right-2 top-1/2 z-20 -translate-y-1/2
+                           rounded-full bg-white/90 dark:bg-slate-900/90
+                           p-3 shadow-lg hover:scale-110 transition"
+                aria-label="Next project"
+              >
+                <ChevronRight className="text-teal-500" size={28} />
+              </button>
+            )
+          }
         >
           {featured.map(project => (
             <div key={project.id} className="px-2">

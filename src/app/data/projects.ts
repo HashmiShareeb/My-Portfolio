@@ -113,6 +113,7 @@ const Data: ProjectData[] = [
     ],
   },
   {
+    featured: true,
     id: 'nexus-fm',
     title: 'Nexus FM',
     label: 'Full-stack development ',
