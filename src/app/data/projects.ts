@@ -2,6 +2,7 @@ import { ProjectData } from '../interfaces/projects.interface'
 
 const Data: ProjectData[] = [
   {
+    featured: false,
     id: 'digital-patient-twin',
     title: 'Digital Patient Twin',
     label: 'Industry Project',
@@ -10,7 +11,6 @@ const Data: ProjectData[] = [
     githubUrl: 'https://github.com/JarneDel/digital-patient-twin-frontend',
     folderUrl: '/FA02.pdf',
     otherFile: '/technical_components.pdf',
-    featured: true,
     sections: [
       {
         title: 'Project Presentation',
@@ -130,7 +130,7 @@ const Data: ProjectData[] = [
       'Vue-Charts',
     ],
     githubUrl: 'https://github.com/HashmiShareeb/shareeb_afsd_fm2025',
-    featured: true,
+    featured: false,
     gallery: [
       'building_page_admin',
       'nexus_fm_manageprop',
@@ -164,11 +164,7 @@ const Data: ProjectData[] = [
     label: 'Team Project',
     image: 'Jachtseizoen_banner_lvi9ct',
     tags: ['Azure', 'CosmosDB', 'C#', 'Google Maps API', 'Xamarin'],
-    gallery: [
-      'jachtseizoen_create_game',
-      'jachtseizoen_roll',
-      'jachtseizoen_ingame',
-    ],
+    gallery: ['Jachtseizoen-showcase'],
   },
   {
     id: 'michael-naessens',
