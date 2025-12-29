@@ -66,7 +66,7 @@ const Skills = () => {
               whileInView="visible"
               viewport={{ once: true }}
               custom={index}
-              className=" list-none dark:bg-teal-800 dark:text-teal-300 shadow dark:shadow-none px-4 py-2 rounded-md text-sm font-semibold bg-teal-300 text-teal-800 dark:hover:bg-teal-700 dark:hover:text-teal-300 hover:bg-teal-300 hover:text-teal-900 transition-colors duration-300 ease-in-out"
+              className=" list-none m-0  dark:bg-teal-800 dark:text-teal-300 shadow dark:shadow-none px-4 py-2 rounded-md text-sm font-semibold bg-teal-300 text-teal-800 dark:hover:bg-teal-700 dark:hover:text-teal-300 hover:bg-teal-300 hover:text-teal-900 transition-colors duration-300 ease-in-out"
             >
               {skill}
             </motion.li>
