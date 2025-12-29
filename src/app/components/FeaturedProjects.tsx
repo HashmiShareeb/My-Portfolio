@@ -125,7 +125,7 @@ const FeaturedProjects = () => {
         <Carousel
           stopOnHover
           centerMode
-          swipable
+          swipeable
           showArrows={false}
           showIndicators={false}
           showStatus={false}
