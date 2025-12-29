@@ -6,7 +6,7 @@ import Skills from './components/Skills'
 import About from './components/About'
 export default function Home() {
   return (
-    <main className="flex flex-col lg:px-52 px-4 ">
+    <main className="flex flex-col lg:px-52 px-4 list-none ">
       {/* hero (intro) */}
       <Intro />
       {/* about me

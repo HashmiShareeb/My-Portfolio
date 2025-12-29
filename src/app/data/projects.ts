@@ -113,6 +113,7 @@ const Data: ProjectData[] = [
     ],
   },
   {
+    featured: true,
     id: 'nexus-fm',
     title: 'Nexus FM',
     label: 'Full-stack development ',
@@ -130,7 +131,6 @@ const Data: ProjectData[] = [
       'Vue-Charts',
     ],
     githubUrl: 'https://github.com/HashmiShareeb/shareeb_afsd_fm2025',
-    featured: false,
     gallery: [
       'building_page_admin',
       'nexus_fm_manageprop',

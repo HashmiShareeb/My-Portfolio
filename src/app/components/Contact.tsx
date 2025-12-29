@@ -9,7 +9,7 @@ const Contact = () => {
     <motion.section
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      className="px-4 mx-auto py-4 lg:py-24"
+      className="px-4 mx-auto py-24"
       id="contact"
     >
       <div className="grid place-items-center m-8">
