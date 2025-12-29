@@ -30,7 +30,7 @@ const Skills = () => {
       transition={{ duration: 0.5, delay: 0.1 }}
       viewport={{ once: true }}
       id="skills"
-      className="py-24 px-4 mx-auto lg:mx-0"
+      className="py-4 lg:py-24 px-4 mx-auto lg:mx-0"
     >
       <GradientTitle title="My Skills" IsCentered={true} />
       <div className="grid place-items-center mt-4">
