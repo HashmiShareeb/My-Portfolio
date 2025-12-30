@@ -2,7 +2,7 @@ import { ProjectData } from '../interfaces/projects.interface'
 
 const Data: ProjectData[] = [
   {
-    featured: false,
+    featured: true,
     id: 'digital-patient-twin',
     title: 'Digital Patient Twin',
     label: 'Industry Project',
@@ -11,13 +11,13 @@ const Data: ProjectData[] = [
     githubUrl: 'https://github.com/JarneDel/digital-patient-twin-frontend',
     folderUrl: '/FA02.pdf',
     otherFile: '/technical_components.pdf',
-    sections: [
-      {
-        title: 'Project Presentation',
-        image: 'digitalpatienttwin',
-        text: 'Me and my team had the honour to present this project at the Delaware HQ in Ghent, where we showcased the Digital Patient Twin to a large audience. The project was well-received, and we received positive feedback for our work.',
-      },
-    ],
+    // sections: [
+    //   {
+    //     title: 'Project Presentation',
+    //     image: 'digitalpatienttwin',
+    //     text: 'Me and my team had the honour to present this project at the Delaware HQ in Ghent, where we showcased the Digital Patient Twin to a large audience. The project was well-received, and we received positive feedback for our work.',
+    //   },
+    // ],
   },
   {
     id: 'my-portfolio',
@@ -107,7 +107,7 @@ const Data: ProjectData[] = [
     otherFile: '/Harmony Brochure.pdf',
     liveUrl: 'https://harmony.energy/',
     gallery: [
-      'marketingsite_harmony',
+      'energygraph',
       'graphprices_iai6af_ipzat2',
       'kpichart_r5fdnn_nhgcbn',
     ],

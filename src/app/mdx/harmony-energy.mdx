@@ -14,21 +14,24 @@ On the internal dashboard, I worked on multiple core features including:
 - **UI improvements, bug fixes, and refactoring to improve maintainability**  
 
 
-I also recreated complex KPI and monitoring graphs using Grafana and custom HTML panels. Throughout the project, I focused on clean code structure, API integration, and user experience improvements. 
+{/* I also recreated complex KPI and monitoring graphs using Grafana and custom HTML panels. Throughout the project, I focused on clean code structure, API integration, and user experience improvements. 
 This was a great learning experience as I got to work with different technologies and frameworks, and also got to understand how a real-world application is built and maintained. 
 
-This allowed me to work across both frontend and backend boundaries while improving my skills in API integration, debugging, and UI/UX.
+This allowed me to work across both frontend and backend boundaries while improving my skills in API integration, debugging, and UI/UX. */}
 
 ## Device Page
 
-One of my main tasks was the designing and developing the **Device Management Page**, a central tool for installers to view, configure, and manage all hardware connected to a site. I built the entire feature from the ground up — from UI/UX design to integrating the full front-end and back-end data flow.
-*(Note: The Device Page is currently running in the development environment and has not yet been deployed to production as of today.)*
+One of my main tasks was the designing and developing the **Device Management Page**, a central tool for installers to view, configure, and manage all hardware connected to a site. I built the entire feature from the ground up — from UI/UX design to integrating the full front-end and back-end data flow. 
+
+
+![Device Page](/images/devpage-dev.png)
+
+*(Note: The Device Page is currently running in the dev environment and wasn't deployed when i worked on it)*
 
 On this page, all devices are shown in clean, responsive cards, showing their name, type, configuration, and current **online/offline** status. I implemented search, filtering, and sorting options so installers can quickly locate specific hardware across even multiple large installations. On each device, there is also a details view with dynamically rendered configuration fields depending on the type, such as Huawei Sun2000 inverters, Easee chargers, or SolarGrid inverters. The inputs are fully validated to make sure configurations are done safely and accurately.
-
 I also developed a **multi-step modal** to add, edit, and validate devices. This system encompasses input validation, handling errors, testing configurations, and providing a flexible layout for other device types in the future without having to refactor much. Once the backend API was finalized, I integrated real device data and aligned the UI with the correct API structure.
 
-## Autodetection Script (Golang)
+### Autodetection Script (Golang)
 
 In support of onboarding, I've developed an autodetection script in Golang that scans the local network for compatible devices using both MAC and IP address discovery. This script executes ARP queries and response analysis to enumerate nearby hardware, detects vendor prefixes, and associated metadata like IP address, device type, and firmware.
 On the frontend, I prepared the Device Page and modal components that would be used to display and add detected devices directly into the dashboard in future updates. The auto-detection script runs on the backend as a service, which lists the discovered devices for installers to swiftly review and configure.
@@ -36,3 +39,6 @@ Put together, the Device Page and the autodetection system comprise an efficient
 
 ## Marketing website
 I completely recreated the marketing website using Svelte, TypeScript, and Tailwind CSS. I implemented i18n using Svelte Stores to manage locales, which was a huge challenge at first but with using reactivity that Svelte 5 provides this was ultimately a smooth process. I also got the freedom to make my own layout as my intership mentor was impressed by my UI/UX and frontend skills, it was a fun project to work on and a good introduction on using Svelte which may come in handy for future projects 😉.
+
+![Harmony Energy marketing website](/images/marketingsite_harmony.png)
+

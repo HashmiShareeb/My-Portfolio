@@ -28,7 +28,7 @@ const EducationAndCareerInfo = () => {
       <p className="w-full md:w-auto flex-1 max-w-prose text-center">
         <SearchIcon className="inline mb-1 mr-1" size={16} />
         Looking for opportunities to grow as a{' '}
-        <strong>Full-stack Developer</strong> and{' '}
+        <strong>Frontend/Backend Developer</strong> and{' '}
         <strong>UI/UX Designer</strong>.
       </p>
     </div>
