@@ -125,12 +125,11 @@ const FeaturedProjects = () => {
         <Carousel
           stopOnHover
           centerMode
-          swipeable
-          showArrows={false}
+          showArrows={true}
           showIndicators={false}
           showStatus={false}
           useKeyboardArrows={true}
-          centerSlidePercentage={92}
+          centerSlidePercentage={100}
           renderArrowPrev={(onClickHandler, hasPrev) =>
             hasPrev && (
               <button
