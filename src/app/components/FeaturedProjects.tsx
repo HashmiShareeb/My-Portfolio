@@ -53,7 +53,7 @@ const FeaturedProjects = () => {
             hasPrev && (
               <button
                 onClick={onClickHandler}
-                className="hidden lg:block absolute left-2 top-1/2 z-20 -translate-y-1/2
+                className="hidden md:block absolute left-2 top-1/2 z-20 -translate-y-1/2
                            rounded-full bg-white/90 dark:bg-slate-900/90
                            p-3 shadow-md dark:shadow-none hover:scale-110 transition"
                 aria-label="Previous project"
@@ -66,7 +66,7 @@ const FeaturedProjects = () => {
             hasNext && (
               <button
                 onClick={onClickHandler}
-                className="lg:block hidden absolute right-2 top-1/2 z-20 -translate-y-1/2
+                className="md:block hidden absolute right-2 top-1/2 z-20 -translate-y-1/2
                            rounded-full bg-white/90 dark:bg-slate-900/90
                            p-3 shadow-md dark:shadow-none hover:scale-110 transition"
                 aria-label="Next project"
