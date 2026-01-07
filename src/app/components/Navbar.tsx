@@ -137,7 +137,7 @@ const Navbar: React.FC = () => {
           >
             Contact
           </Link>
-          <CTA href="/cv_shareeb_2025_1.pdf" target="_blank" download>
+          <CTA href="/shareebcv_2026.pdf" target="_blank" download>
             <Download size={32} />
             <h1 className="text-lg font-bold ml-2">Download Resume</h1>
             <span className="sr-only">Resume</span>
