@@ -26,7 +26,7 @@ One of my main tasks was the designing and developing the **Device Management Pa
 
 ![Device Page](/images/devpage-dev.png)
 
-*(Note: The Device Page is currently running in the dev environment and wasn't deployed when i worked on it)*
+*(Note: The Device Page is currently running in the dev environment and wasn't deployed on production when i was working on it)*
 
 On this page, all devices are shown in clean, responsive cards, showing their name, type, configuration, and current **online/offline** status. I implemented search, filtering, and sorting options so installers can quickly locate specific hardware across even multiple large installations. On each device, there is also a details view with dynamically rendered configuration fields depending on the type, such as Huawei Sun2000 inverters, Easee chargers, or SolarGrid inverters. The inputs are fully validated to make sure configurations are done safely and accurately.
 I also developed a **multi-step modal** to add, edit, and validate devices. This system encompasses input validation, handling errors, testing configurations, and providing a flexible layout for other device types in the future without having to refactor much. Once the backend API was finalized, I integrated real device data and aligned the UI with the correct API structure.
@@ -41,4 +41,3 @@ Put together, the Device Page and the autodetection system comprise an efficient
 I completely recreated the marketing website using Svelte, TypeScript, and Tailwind CSS. I implemented i18n using Svelte Stores to manage locales, which was a huge challenge at first but with using reactivity that Svelte 5 provides this was ultimately a smooth process. I also got the freedom to make my own layout as my intership mentor was impressed by my UI/UX and frontend skills, it was a fun project to work on and a good introduction on using Svelte which may come in handy for future projects 😉.
 
 ![Harmony Energy marketing website](/images/marketingsite_harmony.png)
-
