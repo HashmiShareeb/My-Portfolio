@@ -3,11 +3,23 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import CTA from './CTA'
 import { CldImage } from 'next-cloudinary'
-import { Download } from 'lucide-react'
-
+import { Download, Linkedin, Github } from 'lucide-react'
+import Link from 'next/link'
 import EducationAndCareerInfo from './EducationAndCareerInfo'
 
 const Intro = () => {
+  const startUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.12,
+        duration: 0.5,
+        ease: [0.25, 0.4, 0.25, 1],
+      },
+    }),
+  }
   return (
     <motion.section
       transition={{ delay: 0.2, duration: 0.5 }}
@@ -20,8 +32,17 @@ const Intro = () => {
         y: 10,
       }}
       id="#home"
-      className="min-h-screen flex flex-col items-center justify-center max-w-xl mx-auto px-4 text-center pt-20 lg:py-0"
+      className="relative min-h-screen flex flex-col items-center justify-center max-w-xl mx-auto px-4 text-center pt-20 lg:py-0"
     >
+      {/* Subtle background glow */}
+      <div
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+        aria-hidden="true"
+      >
+        <div className="absolute left-1/2 top-1/4 h-[480px] w-[480px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal-400/[0.07] blur-3xl dark:bg-teal-400/[0.04]" />
+        <div className="absolute right-1/4 top-1/3 h-[320px] w-[320px] rounded-full bg-teal-400/[0.05] blur-3xl dark:bg-cyan-400/[0.03]" />
+      </div>
+
       <div className="flex flex-col items-center justify-center">
         <motion.div
           initial={{
@@ -83,7 +104,7 @@ const Intro = () => {
       {/* Education & work */}
       <EducationAndCareerInfo />
 
-      {/* CTA */}
+      {/* CTA Component */}
       <div className="flex lg:flex-row selection  items-center justify-center gap-10">
         <CTA href="/shareebcv_2026.pdf" target="_blank" download>
           <Download size={32} />

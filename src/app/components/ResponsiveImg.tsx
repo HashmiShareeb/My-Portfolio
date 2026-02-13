@@ -17,7 +17,7 @@ export const ResponsiveImage = ({
     width: 800,
     height: 450,
     alt: alt || 'Section image',
-    className: `rounded-xl shadow-md ${className}`,
+    className: `rounded-xl ${className}`,
     style: { objectFit: 'cover', width: '100%', height: 'auto' } as const,
     priority: true,
   }
