@@ -93,7 +93,7 @@ const FeaturedProjects = () => {
 
                   <div className="p-5 text-left">
                     {project.tags && project.tags.length > 0 && (
-                      <div className="mb-3 flex flex-wrap gap-1.5">
+                      <div className="mb-3 flex flex-wrap gap-2">
                         {project.tags.slice(0, 3).map(tag => (
                           <span
                             key={tag}
@@ -110,14 +110,14 @@ const FeaturedProjects = () => {
                       </div>
                     )}
                     {project.title && (
-                      <h2 className="text-xl font-bold text-transparent">
+                      <h2 className="mx-2 text-xl font-bold text-transparent">
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
                           {project.title}
                         </span>
                       </h2>
                     )}
                     {project.label && (
-                      <p className="mt-2 dark:text-slate-300 text-sm font-medium">
+                      <p className="mx-2 mt-2 dark:text-slate-300 text-sm font-medium">
                         {project.label}
                       </p>
                     )}
