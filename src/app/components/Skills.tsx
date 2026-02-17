@@ -55,7 +55,7 @@ const Skills = () => {
                 className={` capitalize px-3 py-1 rounded-full text-sm font-semibold transition-colors duration-200 ${
                   activeCategory === cat
                     ? 'text-teal-600 dark:text-teal-400 dark:bg-teal-900/40'
-                    : ' text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'
+                    : ' text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'
                 }`}
               >
                 {cat}

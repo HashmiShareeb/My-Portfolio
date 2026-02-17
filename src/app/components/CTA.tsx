@@ -48,7 +48,7 @@ function CTA({
           href={href || '#'}
           target={target || '_self'}
           download={download || false}
-          className={`flex items-center justify-center gap-2 rounded-full border px-4 py-2.5 font-medium backdrop-blur-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-transparent
+          className={`flex items-center justify-center gap-2 rounded-full border p-2.5 font-medium backdrop-blur-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-transparent
             ${
               isSecondary
                 ? 'border-zinc-300/60 bg-zinc-100/50 text-zinc-700 hover:border-zinc-400/40 hover:bg-zinc-200/50 hover:shadow-md hover:shadow-zinc-500/[0.06] focus:ring-zinc-400/30 dark:border-slate-600/40 dark:bg-slate-700/40 dark:text-zinc-300 dark:hover:border-zinc-500/30 dark:hover:bg-slate-600/40 dark:hover:shadow-zinc-500/[0.06] dark:focus:ring-zinc-500/30'

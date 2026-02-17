@@ -6,7 +6,7 @@ export function ProjectTags({ tags }: { tags: ProjectData['tags'] }) {
       {tags.map(tag => (
         <span
           key={tag}
-          className="px-3 py-1 text-xs sm:text-sm font-mono bg-gray-200 dark:bg-slate-800 rounded-full"
+          className="rounded-full border border-neutral-200/60 bg-white/60 px-2.5 py-1.5 text-xs font-medium text-neutral-500 backdrop-blur-sm dark:border-slate-700/40 dark:bg-slate-800/60 dark:text-gray-300"
         >
           {tag}
         </span>

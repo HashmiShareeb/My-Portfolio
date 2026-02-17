@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const EducationAndCareerInfo = () => {
   return (
-    <div className="mb-12 text-sm md:text-md dark:text-slate-300 flex flex-col md:flex-row items-center justify-center gap-4">
+    <div className="mb-12 text-sm md:text-md  flex flex-col md:flex-row items-center justify-center gap-4">
       <p className="w-full md:w-auto flex-1 max-w-prose text-center">
         <GraduationCap className="inline mb-1 mr-1" size={16} />
         Graduated:{' '}

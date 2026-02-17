@@ -18,7 +18,7 @@ const GradientHeaderText = (props: GradientHeaderTextProps) => {
           {props.title}
         </span>
       </h1>
-      <p className={`mt-4 dark:text-slate-300 leading-relaxed font-medium`}>
+      <p className={`mt-4 dark:text-slate-400 leading-relaxed font-medium`}>
         {props.description}
       </p>
     </div>

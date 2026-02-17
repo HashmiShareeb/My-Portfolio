@@ -2,10 +2,13 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import CTA from './CTA'
-import { Download, Folder, Github, Linkedin } from 'lucide-react'
+import { Download, Github, Linkedin } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [activeHash, setActiveHash] = useState<string>('')
+  const [isDocked, setIsDocked] = useState(false)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -14,8 +17,6 @@ const Navbar: React.FC = () => {
   const closeMenu = () => {
     setIsOpen(false)
   }
-
-  const [activeHash, setActiveHash] = useState<string>('')
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -39,6 +40,15 @@ const Navbar: React.FC = () => {
       document.body.style.overflow = 'auto'
     }
   }, [isOpen])
+
+  const navLinks = [
+    { label: 'Home', href: '/#home', id: 'home' },
+    { label: 'Projects', href: '/#projects', id: 'projects' },
+    { label: 'Skills', href: '/#skills', id: 'skills' },
+    { label: 'Contact', href: '/#contact', id: 'contact' },
+  ]
+
+  const spring = { type: 'spring', stiffness: 260, damping: 28 }
 
   return (
     <nav className="relative">
