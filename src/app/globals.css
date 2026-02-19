@@ -5,7 +5,7 @@
 :root {
   --scrollbar-thumb-color: teal;
 }
-
+/*
 ::-webkit-scrollbar {
   scrollbar-width: thin;
   scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
@@ -14,12 +14,16 @@
 ::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-thumb-color);
   border-radius: 6px;
-}
+}*/
 
 /*MDX*/
 .mdx-container li {
   list-style: disc;
   margin-left: 1rem;
+}
+
+.mdx-container li::marker {
+  color: #14b8a6;
 }
 
 /*carousel library class*/

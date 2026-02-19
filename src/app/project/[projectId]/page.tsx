@@ -20,6 +20,8 @@ import { ProjectCTAs as ProjectCTA } from '@/app/components/project/cta'
 import { Section } from '@/app/components/project/Section'
 import { ProjectGallery } from '@/app/components/project/ProjectGallery'
 import { ProjectBanner } from '@/app/components/project/Banner'
+import { ProjectTags } from '@/app/components/project/Tags'
+
 
 // Map projectId → { data, mdx component }
 const projects: Record<string, { data: ProjectData; Content: any }> = {
@@ -117,7 +119,7 @@ export default function ProjectPage() {
   const projectData = projects[projectId as string].data
 
   return (
-    <section className="dark:text-slate-300 font-medium">
+    <section className="dark:text-slate-400/80 font-medium">
       {/* start go back to project btn */}
       <div className="fixed lg:top-20 top-14 left-4 z-20">
         <Link href="/project">
@@ -146,14 +148,8 @@ export default function ProjectPage() {
               {projectData.title}
             </span>
           </h2>
-          {(projectData.tags ?? []).map(tag => (
-            <span
-              key={tag}
-              className="px-3 py-1 text-xs sm:text-sm font-mono bg-gray-200 dark:bg-slate-800 rounded-full mt-1 inline-block mr-2 mb-4 text-gray-800 dark:text-gray-200"
-            >
-              {tag}
-            </span>
-          ))}
+          <ProjectTags tags={projectData.tags ?? []} />
+          <ProjectCTA project={projectData} />
           {/*Render MDX*/}
           <div className="mdx-container">
             <Content {...projectData} />
@@ -162,7 +158,6 @@ export default function ProjectPage() {
           {project.sections?.map((section, idx) => (
             <Section key={idx} section={section} />
           ))}
-          <ProjectCTA project={projectData} />
           <ProjectGallery project={projectData} />
         </ProjectWrapper>
       </MDXProvider>

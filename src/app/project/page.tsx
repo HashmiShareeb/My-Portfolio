@@ -10,7 +10,7 @@ const Projects = () => {
     <div className="min-h-screen flex flex-col lg:px-52 px-4 py-20">
       <GradientTitle
         title="Projects"
-        description="some projects are still in development! To view more projects, visit my GitHub profile."
+        description="To view more projects, visit my GitHub profile."
       />
       {/* go back */}
       <div className="flex items-center">

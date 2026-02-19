@@ -17,13 +17,23 @@ const components: MDXComponents = {
       {...props}
     />
   ),
-  p: props => <p className="mb-4 mt-4" {...props} />,
+  p: props => <p className="mb-4 mt-4 " {...props} />,
   img: props => (
     <img
       className="rounded-xl shadow-md dark:shadow-none max-w-4xl  w-full h-auto dark:border dark:border-slate-700"
       {...props}
     />
   ),
+  strong: props => <strong className="dark:text-slate-400" {...props} />,
+  a: props => (
+    <a
+      className="text-teal-500 dark:text-teal-400 hover:text-teal-300 underline "
+      target="_blank"
+      rel="noopener noreferrer"
+      {...props}
+    />
+  ),
+ // li: props => <li className="dark:text-slate-300 " {...props} />,
 }
 
 export function useMDXComponents(): MDXComponents {

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import CTA from './CTA'
-import { Download, Folder, Github, Linkedin } from 'lucide-react'
+import { Download, Github, Linkedin } from 'lucide-react'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
     setIsOpen(!isOpen)
   }
 
-  const closeMenu = () => {
+  const closeMenu = (id: string) => {
     setIsOpen(false)
   }
 
@@ -24,7 +24,9 @@ const Navbar: React.FC = () => {
   }, [])
 
   const isActive = (id: string) => {
-    return `#${id}` === activeHash ? 'text-teal-400' : 'text-gray-400'
+    return `#/${id}` === activeHash
+      ? 'text-teal-400 bg-white/10 '
+      : 'text-gray-400'
   }
 
   useEffect(() => {
@@ -40,26 +42,52 @@ const Navbar: React.FC = () => {
     }
   }, [isOpen])
 
+  const navLinks = [
+    { label: 'Home', href: '/#', id: 'home' },
+    { label: 'Projects', href: '/#projects', id: 'projects' },
+    { label: 'Skills', href: '/#skills', id: 'skills' },
+    { label: 'Contact', href: '/#contact', id: 'contact' },
+  ]
   return (
     <nav className="relative">
       <div
         className={`fixed top-0 z-[1100] h-[3.5rem] w-full ${
           isOpen
             ? 'bg-transparent shadow-none backdrop-blur-0'
-            : 'bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm shadow-sm dark:shadow-none'
+            : '  bg-white/10 dark:bg-slate-900/30 backdrop-blur-2xl border-white/20 dark:border-white/10'
         }`}
       >
         {' '}
-        <div className="flex items-center justify-between h-full lg:px-52 px-4">
+        <div className="flex items-center justify-between h-full lg:px-56 px-4">
           <Link href="/" className="text-lg font-bold">
             Shareeb{' '}
             <span className="text-teal-500 dark:text-teal-400 font-extrabold">
               Hashmi
             </span>
           </Link>
+          <div className="hidden md:flex items-center gap-1">
+            {navLinks.map(link => (
+              <Link
+                key={link.id}
+                href={link.href}
+                onClick={() => closeMenu(link.id)}
+                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors text-gray-600 duration-200
+                  hover:text-teal-400 hover:bg-white/10 dark:hover:bg-white/5
+                  ${isActive(link.id)}`}
+              >
+                {link.label}
+              </Link>
+            ))}
+
+            <CTA href="/shareebcv_2026.pdf" target="_blank" download>
+              <Download size={16} />
+              <h1 className="text-sm font-bold ml-1">Resume</h1>
+              <span className="sr-only">Resume</span>
+            </CTA>
+          </div>
           <button
             onClick={toggleMenu}
-            className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-teal-400 hover:dark:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300"
+            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-teal-400 hover:dark:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300"
             aria-label="Toggle menu"
           >
             <svg
@@ -93,50 +121,25 @@ const Navbar: React.FC = () => {
           </button>
         </div>
       </div>
-      {/* Mobile menu, show/hide based on menu state. */}
+      {/* Mobile menu */}
       <div
-        className={`fixed top-0 left-0 z-[999] w-full h-screen bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm origin-top ${
+        className={`fixed top-0 left-0 z-[999] w-full h-screen  bg-white/10 dark:bg-slate-900/30 backdrop-blur-2xl border-white/20 dark:border-white/10 origin-top ${
           isOpen ? 'block' : 'hidden '
         }`}
       >
         <div className="pt-[3.5rem] flex flex-col gap-10 items-center justify-center h-full">
           {/* Menu items */}
-          <Link
-            href="/#home"
-            onClick={closeMenu}
-            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-300 transition-colors duration-200 ${isActive(
-              'home',
-            )}`}
-          >
-            Home
-          </Link>
-          <Link
-            href="/#projects"
-            onClick={closeMenu}
-            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-300 transition-colors duration-200 ${isActive(
-              'projects',
-            )}`}
-          >
-            Projects
-          </Link>
-          <Link
-            href="/#skills"
-            onClick={closeMenu}
-            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-300 transition-colors duration-200 ${isActive(
-              'skills',
-            )}`}
-          >
-            My Skills
-          </Link>
-          <Link
-            href="/#contact"
-            onClick={closeMenu}
-            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-300 transition-colors duration-200 ${isActive(
-              'contact',
-            )}`}
-          >
-            Contact
-          </Link>
+          {navLinks.map(link => (
+            <Link
+              key={link.id}
+              href={link.href}
+              onClick={() => closeMenu(link.id)}
+              className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-300 transition-colors duration-200
+                ${isActive(link.id)}`}
+            >
+              {link.label}
+            </Link>
+          ))}
           <CTA href="/shareebcv_2026.pdf" target="_blank" download>
             <Download size={32} />
             <h1 className="text-lg font-bold ml-2">Download Resume</h1>

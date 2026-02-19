@@ -11,6 +11,7 @@ function CTA({
   mailto,
   ariaLabel,
   children,
+  isSecondary,
 }: {
   id?: string
   href?: string
@@ -18,6 +19,7 @@ function CTA({
   download?: boolean
   mailto?: string
   ariaLabel?: string
+  isSecondary?: boolean
   children: React.ReactNode
 }) {
   const handleClick = () => {
@@ -33,7 +35,7 @@ function CTA({
           scale: 1.05,
           transition: { duration: 0.2 },
         }}
-        whileTap={{ scale: 0.9 }}
+        whileTap={{ scale: 0.95 }}
         onClick={handleClick}
         whileFocus={{
           scale: 1.0,
@@ -46,7 +48,12 @@ function CTA({
           href={href || '#'}
           target={target || '_self'}
           download={download || false}
-          className="rounded-md bg-teal-900 text-teal-400 p-3 font-medium transition-colors hover:bg-teal-700 duration-300 outline-none flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+          className={`flex items-center justify-center gap-2 rounded-full border p-2.5 font-medium backdrop-blur-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-transparent
+            ${
+              isSecondary
+                ? 'border-zinc-300/60 bg-zinc-100/50 text-zinc-700 hover:border-zinc-400/40 hover:bg-zinc-200/50 hover:shadow-md hover:shadow-zinc-500/[0.06] focus:ring-zinc-400/30 dark:border-slate-600/40 dark:bg-slate-700/40 dark:text-zinc-300 dark:hover:border-zinc-500/30 dark:hover:bg-slate-600/40 dark:hover:shadow-zinc-500/[0.06] dark:focus:ring-zinc-500/30'
+                : 'border-teal-200/60 bg-teal-500/10 text-teal-600 hover:border-teal-500/20 hover:bg-teal-500/20 hover:shadow-md hover:shadow-teal-500/[0.06] focus:ring-teal-500/30 dark:border-teal-800/40 dark:bg-teal-900/40 dark:text-teal-400 dark:hover:border-teal-400/20 dark:hover:bg-teal-800/40 dark:hover:shadow-teal-400/[0.06] dark:focus:ring-teal-400/30'
+            }`}
         >
           {children}
         </Link>
