@@ -107,8 +107,8 @@ const Intro = () => {
       {/* CTA Component */}
       <div className="flex lg:flex-row selection  items-center justify-center gap-10">
         <CTA href="/shareebcv_2026.pdf" target="_blank" download>
-          <Download size={32} />
-          <h1 className="text-lg font-bold ml-2">Download Resume</h1>
+          <Download size={18} />
+          <h1 className="text-md font-bold">Download Resume</h1>
           <span className="sr-only">Resume</span>
         </CTA>
       </div>

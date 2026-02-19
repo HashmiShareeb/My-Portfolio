@@ -34,7 +34,7 @@ const Contact = ({ variant = 'full' }: conctactVar) => {
     <motion.section
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      className="px-4 mx-auto "
+      className="px-4 mx-auto lg:py-40 py-20"
       id="contact"
     >
       <div className="grid place-items-center m-8">

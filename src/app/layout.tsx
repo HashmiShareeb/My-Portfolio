@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth focus:scroll-auto list-none">
       <body
-        className={`${font.className}  bg-zinc-100 dark:bg-slate-950 text-slate-600 dark:text-slate-100 transition-colors duration-300 `}
+        className={`${font.className}  bg-zinc-100 dark:bg-slate-950 text-slate-700 dark:text-slate-100 transition-colors duration-300 `}
       >
         <Navbar />
         {children}
