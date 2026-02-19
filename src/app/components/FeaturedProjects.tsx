@@ -191,6 +191,23 @@ const FeaturedProjects = () => {
                   </div>
 
                   <div className="p-5 text-left w-full">
+                    {project.tags && project.tags.length > 0 && (
+                      <div className="mb-3 flex flex-wrap gap-2">
+                        {project.tags.slice(0, 3).map(tag => (
+                          <span
+                            key={tag}
+                            className="rounded-full border border-neutral-200/60 bg-white/60 px-2.5 py-0.5 text-xs font-medium text-neutral-500 backdrop-blur-sm dark:border-slate-700/40 dark:bg-slate-800/60 dark:text-gray-400"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                        {project.tags.length > 3 && (
+                          <span className="rounded-full px-1.5 py-0.5 text-[11px] font-medium text-gray-400 dark:text-gray-500">
+                            +{project.tags.length - 3}
+                          </span>
+                        )}
+                      </div>
+                    )}
                     {project.title && (
                       <h2 className="text-[1.2rem] font-bold text-transparent">
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
@@ -203,14 +220,15 @@ const FeaturedProjects = () => {
                         {project.label}
                       </p>
                     )}
-                    <button className="text-sm mt-4 inline-flex items-center gap-2 text-teal-600 dark:text-teal-400 font-medium group">
-                      <span className="group-hover:text-teal-300 transition-all">
+                    <button className="mt-4 inline-flex items-center gap-2 text-teal-600 dark:text-teal-400 font-medium group">
+                      <span className="inline-flex items-center gap-2 rounded-full bg-teal-500/10 px-3.5 py-1.5 text-sm font-semibold text-teal-600 transition-all duration-200 group-hover:bg-teal-500/15 group-hover:gap-2.5 dark:bg-teal-400/10 dark:text-teal-400 dark:group-hover:bg-teal-400/15">
                         View Project
+                        <ChevronRight
+                          size={14}
+                          strokeWidth={2.5}
+                          className="transition-transform duration-300 group-hover:translate-x-1"
+                        />
                       </span>
-                      <ChevronRight
-                        size={20}
-                        className="transition-transform duration-300 transform group-hover:translate-x-1"
-                      />
                     </button>
                   </div>
                 </div>
