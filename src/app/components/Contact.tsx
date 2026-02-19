@@ -13,19 +13,19 @@ const Contact = ({ variant = 'full' }: conctactVar) => {
       <div className="flex flex-wrap items-center gap-3 p-4">
         {/* Email — primary */}
         <CTA href="mailto:shareeb.hashmi@howest.student.be">
-          <Mail size={16} />
+          <Mail size={20} />
         </CTA>
         {/* LinkedIn */}
         <CTA
           href="https://www.linkedin.com/in/shareeb-hashmi-569b38161/"
           target="_blank"
         >
-          <Linkedin size={16} />
+          <Linkedin size={20} />
         </CTA>
 
         {/* GitHub */}
         <CTA href="https://github.com/HashmiShareeb" target="_blank">
-          <Github size={16} />
+          <Github size={20} />
         </CTA>
       </div>
     )
@@ -40,7 +40,7 @@ const Contact = ({ variant = 'full' }: conctactVar) => {
       <div className="grid place-items-center m-8">
         <GradientTitle title="Contact" IsCentered={true} />
         <div className="mt-4">
-          <p className="text-md text-center leading-relaxed  font-medium  dark:text-slate-400 lg:w-3/4 mx-auto">
+          <p className="text-md text-center leading-relaxed  font-medium dark:text-slate-400/80 lg:w-3/4 mx-auto">
             I am always open to new opportunities. Feel free to reach out to me
             if you have any questions or just want to say hi.
           </p>

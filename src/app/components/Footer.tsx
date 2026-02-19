@@ -8,7 +8,7 @@ const Footer = () => {
       <GlassSeparator />
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-8 sm:flex-row sm:justify-between sm:px-6 lg:px-8">
         {/* Copyright */}
-        <p className="text-[13px] text-gray-400 dark:text-gray-500">
+        <p className="text-sm text-slate-400 dark:text-slate-400/80 font-medium">
           Made with ❤️ by Shareeb Hashmi{` © ${new Date().getFullYear()}`}
         </p>
 

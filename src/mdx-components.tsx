@@ -24,6 +24,16 @@ const components: MDXComponents = {
       {...props}
     />
   ),
+  strong: props => <strong className="dark:text-slate-400" {...props} />,
+  a: props => (
+    <a
+      className="text-teal-500 dark:text-teal-400 hover:text-teal-300 underline "
+      target="_blank"
+      rel="noopener noreferrer"
+      {...props}
+    />
+  ),
+ // li: props => <li className="dark:text-slate-300 " {...props} />,
 }
 
 export function useMDXComponents(): MDXComponents {
