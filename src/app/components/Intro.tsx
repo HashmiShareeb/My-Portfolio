@@ -105,12 +105,38 @@ const Intro = () => {
       <EducationAndCareerInfo />
 
       {/* CTA Component */}
-      <div className="flex lg:flex-row selection  items-center justify-center gap-10">
+      <div className="flex flex-wrap lg:flex-row selection  items-center justify-center gap-10">
         <CTA href="/shareebcv_2026.pdf" target="_blank" download>
           <Download size={18} />
           <h1 className="text-md font-bold">Download Resume</h1>
           <span className="sr-only">Resume</span>
         </CTA>
+        <div className="flex flex-1 justify-center gap-4 ">
+          <Link
+            href="https://github.com/HashmiShareeb"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="flex items-center"
+          >
+            <Github
+              size={28}
+              className="text-slate-400 hover:text-teal-400 transition-colors duration-200"
+            />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/shareeb-hashmi-569b38161/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="flex items-center"
+          >
+            <Linkedin
+              size={28}
+              className="text-slate-400 hover:text-teal-400 transition-colors duration-200"
+            />
+          </Link>
+        </div>
       </div>
     </motion.section>
   )
