@@ -11,13 +11,6 @@ const Data: ProjectData[] = [
     githubUrl: 'https://github.com/JarneDel/digital-patient-twin-frontend',
     folderUrl: '/FA02.pdf',
     otherFile: '/technical_components.pdf',
-    // sections: [
-    //   {
-    //     title: 'Project Presentation',
-    //     image: 'digitalpatienttwin',
-    //     text: 'Me and my team had the honour to present this project at the Delaware HQ in Ghent, where we showcased the Digital Patient Twin to a large audience. The project was well-received, and we received positive feedback for our work.',
-    //   },
-    // ],
   },
   {
     id: 'my-portfolio',
@@ -113,7 +106,7 @@ const Data: ProjectData[] = [
     ],
   },
   {
-    featured: true,
+    featured: false,
     id: 'nexus-fm',
     title: 'Nexus FM',
     label: 'Full-stack development ',
@@ -165,6 +158,7 @@ const Data: ProjectData[] = [
     image: 'Jachtseizoen_banner_lvi9ct',
     tags: ['Azure', 'CosmosDB', 'C#', 'Google Maps API', 'Xamarin'],
     gallery: ['Jachtseizoen-showcase'],
+    githubUrl: 'https://github.com/BossuytBram/JachtSeizoen2022_2023',
   },
   {
     id: 'michael-naessens',
