@@ -39,8 +39,8 @@ const Contact = ({ variant = 'full' }: conctactVar) => {
     >
       <div className="grid place-items-center m-8">
         <GradientTitle title="Contact" IsCentered={true} />
-        <div className="mt-4">
-          <p className="text-md text-center leading-relaxed  font-medium dark:text-slate-400/80 lg:w-3/4 mx-auto">
+        <div className="mt-4 lg:max-w-5xl mx-auto text-center ">
+          <p className="text-md leading-relaxed  font-medium dark:text-slate-400/80 lg:w-3/4 mx-auto">
             I am always open to new opportunities.{' '}
             <strong className="inline-block dark:text-slate-400">
               I'd love to hear from you whether it's a question, a project idea,
