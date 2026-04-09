@@ -43,7 +43,7 @@ export const ProjectCTAs = ({ project }: { project: ProjectData }) => {
       {project.videoUrl && (
         <CTA href={project.videoUrl} target="_blank" ariaLabel="Video demo">
           <PlayCircle size={26} />
-          <span className="lg:ml-1 sr-only lg:not-sr-only">Watch Video</span>
+          <span className="lg:ml-1 sr-only lg:not-sr-only">Watch Demo</span>
         </CTA>
       )}
       {project.folderUrl && (
