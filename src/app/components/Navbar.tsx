@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
         className={`fixed top-0 z-[1100] h-[3.5rem] w-full ${
           isOpen
             ? 'bg-transparent shadow-none backdrop-blur-0'
-            : '  bg-white/10 dark:bg-slate-900/30 backdrop-blur-2xl border-white/20 dark:border-white/10'
+            : '  bg-white/10 dark:bg-slate-950/30 backdrop-blur-2xl border-white/20 dark:border-white/10'
         }`}
       >
         {' '}
