@@ -29,54 +29,54 @@ const Data: ProjectData[] = [
     githubUrl: 'https://github.com/HashmiShareeb/my_portfolio_24',
     gallery: ['my_portfolio_dm_display', 'my_portfolio_lm'],
   },
-  {
-    featured: true,
-    id: 'blitx',
-    title: 'Blitx',
-    image: 'Bachelor_Proef',
-    label: 'Research Project',
-    tags: [
-      'Axios',
-      // 'DTO',
-      'Hexagonal Architecture',
-      'JPA',
-      'Mapbox',
-      'Maven',
-      'Pinia',
-      'PostgreSQL',
-      // 'REST API',
-      'Spring Boot',
-      // 'Spring Security',
-      'Vue.js',
-    ],
-    sections: [
-      {
-        title: 'Hexagonal Architecture',
-        image: '/images/hexagonal_architecture.png',
-        text: 'Hexagonal architecture, also known as "Ports and Adapters", is a software architecture aimed at isolating the core of the application (domain logic) from external systems such as databases, frameworks, user interfaces, and container technologies like Docker. This architecture establishes a clear separation between internal domains and external components by using well-defined interfaces (Ports) and implementations of these interfaces to interact with external systems like the frontend for example (Adapters).',
-      },
-      {
-        title: 'User Roles',
-        text: 'This project uses two roles: ADMIN and USER. Admin can manage the vehicles and see the rides, while User can request rides and look at their rides history. These roles are enforced through Spring Security to ensure secure access control.',
-      },
-      {
-        title: 'Frontend',
-        text: 'Built with Vue 3 and Vite, using Pinia and LocalStorage for state management and Axios for API communication. The dashboard features secure navigation via Vue Router guards, responsive CRUD views for vehicles andrides, and a clear separation between the user roles. The user can request rides and the route backend fetches the coordinates with the mapbox map and draws the routes.',
-      },
-      {
-        title: 'Backend',
-        text: 'Powered by Spring Boot with JPA and PostgreSQL, the backend follows a hexagonal architecture with distinct domain, application, and infrastructure layers. Data Transfer Objects (DTOs) protect sensitive fields, while WebConfig ensures secure CORS communication with the frontend. Authentication and authorization are handled via Spring Security.',
-      },
-      {
-        title: 'Research & Learning',
-        text: 'During the project, I explored different architectural approaches (MVC, layered, clean architecture) and compared them with hexagonal architecture. Community feedback (e.g. Spring and other communities on Reddit and forums) influenced pragmatic decisions such as combining JPA annotations with a domain-driven model. The project demonstrates my ability to research, evaluate, and implement complex fullstack architectures.',
-      },
-    ],
-    githubUrl: 'https://github.com/HashmiShareeb/researchproject_backend',
-    gallery: ['routesummary', 'vehicle_list', 'ridehistory_dm'],
-    videoUrl:
-      'https://drive.google.com/file/d/1UnGSze1mqtRbY23RQg-quPxPp18ObcYx/view?usp=sharing',
-  },
+  // {
+  //   featured: true,
+  //   id: 'blitx',
+  //   title: 'Blitx',
+  //   image: 'Bachelor_Proef',
+  //   label: 'Research Project',
+  //   tags: [
+  //     'Axios',
+  //     // 'DTO',
+  //     'Hexagonal Architecture',
+  //     'JPA',
+  //     'Mapbox',
+  //     'Maven',
+  //     'Pinia',
+  //     'PostgreSQL',
+  //     // 'REST API',
+  //     'Spring Boot',
+  //     // 'Spring Security',
+  //     'Vue.js',
+  //   ],
+  //   sections: [
+  //     {
+  //       title: 'Hexagonal Architecture',
+  //       image: '/images/hexagonal_architecture.png',
+  //       text: 'Hexagonal architecture, also known as "Ports and Adapters", is a software architecture aimed at isolating the core of the application (domain logic) from external systems such as databases, frameworks, user interfaces, and container technologies like Docker. This architecture establishes a clear separation between internal domains and external components by using well-defined interfaces (Ports) and implementations of these interfaces to interact with external systems like the frontend for example (Adapters).',
+  //     },
+  //     {
+  //       title: 'User Roles',
+  //       text: 'This project uses two roles: ADMIN and USER. Admin can manage the vehicles and see the rides, while User can request rides and look at their rides history. These roles are enforced through Spring Security to ensure secure access control.',
+  //     },
+  //     {
+  //       title: 'Frontend',
+  //       text: 'Built with Vue 3 and Vite, using Pinia and LocalStorage for state management and Axios for API communication. The dashboard features secure navigation via Vue Router guards, responsive CRUD views for vehicles andrides, and a clear separation between the user roles. The user can request rides and the route backend fetches the coordinates with the mapbox map and draws the routes.',
+  //     },
+  //     {
+  //       title: 'Backend',
+  //       text: 'Powered by Spring Boot with JPA and PostgreSQL, the backend follows a hexagonal architecture with distinct domain, application, and infrastructure layers. Data Transfer Objects (DTOs) protect sensitive fields, while WebConfig ensures secure CORS communication with the frontend. Authentication and authorization are handled via Spring Security.',
+  //     },
+  //     {
+  //       title: 'Research & Learning',
+  //       text: 'During the project, I explored different architectural approaches (MVC, layered, clean architecture) and compared them with hexagonal architecture. Community feedback (e.g. Spring and other communities on Reddit and forums) influenced pragmatic decisions such as combining JPA annotations with a domain-driven model. The project demonstrates my ability to research, evaluate, and implement complex fullstack architectures.',
+  //     },
+  //   ],
+  //   githubUrl: 'https://github.com/HashmiShareeb/researchproject_backend',
+  //   gallery: ['routesummary', 'vehicle_list', 'ridehistory_dm'],
+  //   videoUrl:
+  //     'https://drive.google.com/file/d/1UnGSze1mqtRbY23RQg-quPxPp18ObcYx/view?usp=sharing',
+  // },
   {
     featured: true,
     id: 'harmony-energy',
@@ -106,7 +106,6 @@ const Data: ProjectData[] = [
     ],
   },
   {
-    featured: false,
     id: 'nexus-fm',
     title: 'Nexus FM',
     label: 'Full-stack development ',

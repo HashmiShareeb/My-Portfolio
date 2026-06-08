@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
         className={`fixed top-0 z-[1100] h-[3.5rem] w-full ${
           isOpen
             ? 'bg-transparent shadow-none backdrop-blur-0'
-            : '  bg-white/10 dark:bg-slate-950/30 backdrop-blur-2xl border-white/20 dark:border-white/10'
+            : '  bg-white/10 dark:bg-slate-950/40 backdrop-blur-2xl border-white/20 dark:border-white/10'
         }`}
       >
         {' '}
@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
                 key={link.id}
                 href={link.href}
                 onClick={() => closeMenu(link.id)}
-                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors text-gray-600 duration-200
+                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors text-gray-300 duration-200
                   hover:text-teal-400 hover:bg-white/10 dark:hover:bg-white/5
                   ${isActive(link.id)}`}
               >
@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
           </div>
           <button
             onClick={toggleMenu}
-            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-teal-400 hover:dark:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300"
+            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-teal-400 hover:dark:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300"
             aria-label="Toggle menu"
           >
             <svg
@@ -123,7 +123,7 @@ const Navbar: React.FC = () => {
       </div>
       {/* Mobile menu */}
       <div
-        className={`fixed top-0 left-0 z-[999] w-full h-screen  bg-white/10 dark:bg-slate-900/30 backdrop-blur-2xl border-white/20 dark:border-white/10 origin-top ${
+        className={`fixed top-0 left-0 z-[999] w-full h-screen  bg-white/10 dark:bg-slate-900/40 backdrop-blur-2xl border-white/20 dark:border-white/10 origin-top ${
           isOpen ? 'block' : 'hidden '
         }`}
       >
