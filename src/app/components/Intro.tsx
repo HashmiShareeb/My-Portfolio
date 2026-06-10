@@ -93,7 +93,7 @@ const Intro = () => {
         Shareeb Hashmi
       </h1>
       <h2 className="mt-4 text-2xl lg:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
-        Junior Full-stack Developer
+        Web developer
       </h2>
       <p className="mb-8 mt-4 text-md leading-relaxed text-center dark:text-slate-400/80  font-medium">
         I have a passion for web development and love creating new things. I am
